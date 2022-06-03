@@ -1,4 +1,19 @@
-/* Write your global styles here, in PostCSS syntax */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.focus-outline:focus {
+  outline-style: solid;
+  outline-width: 0.2rem;
+  @apply transition-all outline-blue-500/50 border-blue-500 dark:border-blue-500;
+}
+
+.focus-outline:active {
+  outline-style: solid;
+  outline-width: 0.3rem;
+  @apply transition-all outline-blue-500/50 border-blue-500 dark:border-blue-500;
+}
+
+.focus-outline-danger:focus, .focus-outline-danger:active {
+  @apply outline-red-500/50 border-red-500 dark:border-red-500;
+}
