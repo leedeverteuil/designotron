@@ -48,8 +48,6 @@
 
   onMount(() => {
     root = document.documentElement;
-    console.log(root);
-
     initMode();
   });
 </script>
