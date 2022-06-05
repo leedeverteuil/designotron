@@ -2,6 +2,9 @@
   import Button from "./Button.svelte";
   import Plus from "svelte-bootstrap-icons/lib/Plus/Plus.svelte";
   import SectionLayout from "./SectionLayout.svelte";
+  import AddSectionModal from "./AddSectionModal.svelte";
+
+  let showAddModal: boolean = false;
 
   const randomize = () => {
     // Randomize existing sections
@@ -19,8 +22,16 @@
     // Remove all sections from layout
   };
 
-  const add = () => {
-    // Add new section
+  const openAddModal = () => {
+    showAddModal = true;
+  };
+
+  const addDecision = (e: CustomEvent) => {
+    closeAddModal();
+  };
+
+  const closeAddModal = () => {
+    showAddModal = false;
   };
 </script>
 
@@ -34,21 +45,23 @@
   </div>
 
   <!-- Section outer container -->
-  <div
-    class="mt-6 flex flex-col items-center justify-center"
-  >
+  <div class="mt-6 flex flex-col items-center justify-center">
     <!-- Section inner container -->
     <SectionLayout />
 
     <!-- Add button -->
     <button
-      on:click={add}
+      on:click={openAddModal}
       class="flex flex-col items-center justify-center p-4 pt-2 mt-4 gap-1
                    rounded-lg focus-outline transition-all
-                   hover:-translate-y-1 focus:-translate-y-1"
-    >
+                   hover:-translate-y-1 focus:-translate-y-1">
       <Plus class="text-slate-400 dark:text-slate-600 w-12 h-12" />
       <span class="text-slate-900 dark:text-slate-100">Add Section</span>
     </button>
   </div>
+
+  <!-- Add section modal -->
+  {#if showAddModal}
+    <AddSectionModal on:decision={addDecision} on:close={closeAddModal} />
+  {/if}
 </div>
