@@ -30,9 +30,7 @@
   };
 
   const removeSection = (index: number) => {
-    sections = sections.filter((_item, itemIndex) => {
-      index != itemIndex;
-    });
+    sections = sections.filter((_item, itemIndex) => index != itemIndex);
   };
 
   const moveSectionUp = (index: number) => {
