@@ -8,7 +8,7 @@
   let layout: SectionLayout;
 
   const randomize = () => {
-    // Randomize existing sections
+    layout.randomizeAllSections();
   };
 
   const importFunc = () => {
@@ -29,7 +29,7 @@
 
   const addDecision = (e: CustomEvent) => {
     if (e.detail && e.detail.key) {
-      layout.addSection(e.detail.key)
+      layout.addSection(e.detail.key);
     }
 
     closeAddModal();
@@ -43,7 +43,7 @@
 <div class="mt-8">
   <!-- Control buttons -->
   <div class="w-full grid grid-cols-4 gap-3 justify-items-stretch">
-    <Button primary>Randomize</Button>
+    <Button primary on:click={randomize}>Randomize</Button>
     <Button>Import</Button>
     <Button>Export</Button>
     <Button danger>Destroy</Button>

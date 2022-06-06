@@ -9,6 +9,7 @@
     id: number;
     key: string;
     data: SectionType;
+    component?: Section;
   };
 
   let uid: number = 0;
@@ -22,14 +23,42 @@
     sections = [];
   };
 
-  const removeSection = (index: number) => {
-    sections.splice(index, 1);
-    sections = sections;
+  export const randomizeAllSections = () => {
+    sections.forEach((section) => {
+      section.component?.randomize();
+    });
   };
+
+  const removeSection = (index: number) => {
+    sections = sections.filter((_item, itemIndex) => {
+      index != itemIndex;
+    });
+  };
+
+  const moveSectionUp = (index: number) => {
+    // const section = sections[index];
+    // sections.splice(index, 1);
+
+    // const newIndex = index - 1;
+    // if (newIndex < 0) {
+    //   sections.push(section);
+    // } else {
+    //   sections.splice(newIndex, 0, section);
+    // }
+
+    // sections = sections;
+  };
+
+  const moveSectionDown = (index: number) => {};
 </script>
 
 <div class="flex flex-col w-full">
-  {#each sections as section, i}
-    <Section data={section.data} on:remove={() => removeSection(i)} />
+  {#each sections as section, i (section.id)}
+    <Section
+      data={section.data}
+      on:remove={() => removeSection(i)}
+      on:moveup={() => moveSectionUp(i)}
+      on:movedown={() => moveSectionDown(i)}
+      bind:this={section.component} />
   {/each}
 </div>

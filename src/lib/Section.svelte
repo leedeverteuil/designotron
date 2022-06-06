@@ -7,6 +7,8 @@
   import Trash from "svelte-bootstrap-icons/lib/Trash/Trash.svelte";
   import ArrowLeft from "svelte-bootstrap-icons/lib/ArrowLeft/ArrowLeft.svelte";
   import ArrowRight from "svelte-bootstrap-icons/lib/ArrowRight/ArrowRight.svelte";
+  import ArrowUp from "svelte-bootstrap-icons/lib/ArrowUp/ArrowUp.svelte";
+  import ArrowDown from "svelte-bootstrap-icons/lib/ArrowDown/ArrowDown.svelte";
 
   export let data: SectionType;
 
@@ -50,6 +52,16 @@
     updateOpt();
   };
 
+  const moveUp = (e: Event) => {
+    e.stopPropagation();
+    dispatch("moveup");
+  };
+
+  const moveDown = (e: Event) => {
+    e.stopPropagation();
+    dispatch("movedown");
+  };
+
   const remove = () => {
     dispatch("remove");
   };
@@ -60,8 +72,14 @@
     }
   };
 
+  export const randomize = () => {
+    currentIndex = Math.floor(Math.random() * options.length);
+    updateOpt();
+  };
+
   onMount(() => {
     document.addEventListener("click", onDocumentClick);
+    randomize();
   });
 
   onDestroy(() => {
@@ -76,26 +94,38 @@
     class="transition-all border-slate-400 dark:border-slate-700 select-none"
     class:selected
     src={sectionOpt.src}
-    alt="A screenshot of a portion of a webpage."
-  />
+    alt="A screenshot of a portion of a webpage." />
 
   <!-- Selection control buttons -->
   {#if selected}
     <div
       transition:slide={{ duration: 250 }}
-      class="px-4 py-4 w-full flex flex-col gap-3 items-center justify-center"
-    >
+      class="px-4 py-4 w-full flex flex-col gap-3 items-center justify-center">
       <a
         class="block text-slate-500 dark:text-slate-600 hover:text-blue-500 hover:underline"
-        href={sectionOpt.href}>&copy; {sectionOpt.author}</a
-      >
+        href={sectionOpt.href}>&copy; {sectionOpt.author}</a>
       <div class="flex gap-3 items-center justify-center">
+        <!-- Previous option -->
         <Button on:click={previous}>
           <ArrowLeft class="" />
         </Button>
+
+        <!-- Next option -->
         <Button on:click={next}>
           <ArrowRight class="" />
         </Button>
+
+        <!-- Move up -->
+        <Button on:click={moveUp}>
+          <ArrowUp class="" />
+        </Button>
+
+        <!-- Move Down -->
+        <Button on:click={moveDown}>
+          <ArrowDown class="" />
+        </Button>
+
+        <!-- Delete section -->
         <Button danger on:click={remove}>
           <Trash />
         </Button>
