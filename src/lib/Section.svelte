@@ -7,12 +7,11 @@
   import Trash from "svelte-bootstrap-icons/lib/Trash/Trash.svelte";
   import ArrowLeft from "svelte-bootstrap-icons/lib/ArrowLeft/ArrowLeft.svelte";
   import ArrowRight from "svelte-bootstrap-icons/lib/ArrowRight/ArrowRight.svelte";
-  import AddSectionModal from "./AddSectionModal.svelte";
 
-  export let sectionType: SectionType;
+  export let data: SectionType;
 
   const dispatch = createEventDispatcher();
-  const options = sectionType.options;
+  const options = data.options;
   const lastIndex = options.length - 1;
 
   let containerElement: HTMLElement;
@@ -74,7 +73,7 @@
 
 <button bind:this={containerElement} class="block" on:click={click}>
   <img
-    class="transition-all border-slate-400 dark:border-slate-700"
+    class="transition-all border-slate-400 dark:border-slate-700 select-none"
     class:selected
     src={sectionOpt.src}
     alt="A screenshot of a portion of a webpage."

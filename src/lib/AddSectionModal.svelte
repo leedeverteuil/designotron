@@ -27,11 +27,11 @@
       </button>
     </header>
     <div>
-      <AddSectionModalOption option="Header" on:decision />
-      <AddSectionModalOption option="Hero" on:decision />
-      <AddSectionModalOption option="Features" on:decision />
-      <AddSectionModalOption option="Blog" on:decision />
-      <AddSectionModalOption option="Footer" on:decision />
+      <AddSectionModalOption key="header" option="Header" on:decision />
+      <AddSectionModalOption key="hero" option="Hero" on:decision />
+      <AddSectionModalOption key="features" option="Features" on:decision />
+      <AddSectionModalOption key="blog" option="Blog" on:decision />
+      <AddSectionModalOption last key="footer" option="Footer" on:decision />
     </div>
   </div>
 </Modal>

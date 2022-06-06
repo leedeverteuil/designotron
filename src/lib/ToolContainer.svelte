@@ -5,6 +5,7 @@
   import AddSectionModal from "./AddSectionModal.svelte";
 
   let showAddModal: boolean = false;
+  let layout: SectionLayout;
 
   const randomize = () => {
     // Randomize existing sections
@@ -27,6 +28,10 @@
   };
 
   const addDecision = (e: CustomEvent) => {
+    if (e.detail && e.detail.key) {
+      layout.addSection(e.detail.key)
+    }
+
     closeAddModal();
   };
 
@@ -47,7 +52,7 @@
   <!-- Section outer container -->
   <div class="mt-6 flex flex-col items-center justify-center">
     <!-- Section inner container -->
-    <SectionLayout />
+    <SectionLayout bind:this={layout} />
 
     <!-- Add button -->
     <button
