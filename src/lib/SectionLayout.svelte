@@ -15,22 +15,21 @@
   let sections: Array<SectionEntry> = [];
 
   export const addSection = (key: SectionKey) => {
-    // sectionList.push({
-    //   id: uid++,
-    //   key: key,
-    //   data: sections[key],
-    // });
-
     sections = [...sections, { id: uid++, key: key, data: sectionData[key] }];
   };
 
   export const removeAllSections = () => {
     sections = [];
   };
+
+  const removeSection = (index: number) => {
+    sections.splice(index, 1);
+    sections = sections;
+  };
 </script>
 
 <div class="flex flex-col w-full">
-  {#each sections as section}
-    <Section data={section.data} />
+  {#each sections as section, i}
+    <Section data={section.data} on:remove={() => removeSection(i)} />
   {/each}
 </div>
