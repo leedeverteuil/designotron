@@ -99,7 +99,7 @@
   <!-- Selection control buttons -->
   {#if selected}
     <div
-      transition:slide={{ duration: 250 }}
+      transition:slide|local={{ duration: 250 }}
       class="px-4 py-4 w-full flex flex-col gap-3 items-center justify-center">
       <a
         class="block text-slate-500 dark:text-slate-600 hover:text-blue-500 hover:underline"
