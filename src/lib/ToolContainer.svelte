@@ -20,7 +20,7 @@
   };
 
   const destroy = () => {
-    // Remove all sections from layout
+    layout.removeAllSections();
   };
 
   const openAddModal = () => {
@@ -44,9 +44,17 @@
   <!-- Control buttons -->
   <div class="w-full grid grid-cols-4 gap-3 justify-items-stretch">
     <Button primary on:click={randomize}>Randomize</Button>
-    <Button>Import</Button>
-    <Button>Export</Button>
-    <Button danger>Destroy</Button>
+    <Button
+      >Import
+      <span class="text-sm bg-slate-300 dark:bg-slate-800 px-2 py-1 rounded-lg"
+        >Todo</span
+      ></Button>
+    <Button
+      >Export
+      <span class="text-sm bg-slate-300 dark:bg-slate-800 px-2 py-1 rounded-lg"
+        >Todo</span>
+    </Button>
+    <Button danger on:click={destroy}>Destroy</Button>
   </div>
 
   <!-- Section outer container -->
