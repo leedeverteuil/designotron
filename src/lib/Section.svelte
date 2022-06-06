@@ -17,6 +17,7 @@
   const lastIndex = options.length - 1;
 
   let containerElement: HTMLElement;
+  let imageElement: HTMLElement;
   let selected: boolean = false;
   let currentIndex: number = 0;
   let sectionOpt: SectionOption;
@@ -29,7 +30,6 @@
 
   const click = (e: Event) => {
     selected = !selected;
-    e.stopPropagation();
   };
 
   const previous = (e: Event) => {
@@ -67,7 +67,7 @@
   };
 
   const onDocumentClick = (e: Event) => {
-    if (e.target != containerElement && selected) {
+    if (e.target != containerElement && e.target != imageElement && selected) {
       selected = false;
     }
   };
@@ -91,6 +91,7 @@
 
 <button bind:this={containerElement} class="block" on:click={click}>
   <img
+    bind:this={imageElement}
     class="transition-all border-slate-400 dark:border-slate-700 select-none"
     class:selected
     src={sectionOpt.src}
