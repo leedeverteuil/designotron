@@ -6,7 +6,7 @@
   import ToolContainer from "$lib/ToolContainer.svelte";
 </script>
 
-<header class="max-w-3xl mx-auto mt-16 px-5 text-slate-900 dark:text-slate-100">
+<header class="max-w-4xl mx-auto mt-16 px-5 text-slate-900 dark:text-slate-100">
   <div class="flex gap-3 items-center justify-end text-slate-400">
     <!-- Link to project repo -->
     <a

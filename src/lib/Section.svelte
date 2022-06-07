@@ -89,10 +89,10 @@
   });
 </script>
 
-<button bind:this={containerElement} class="block" on:click={click}>
+<button bind:this={containerElement} class="block w-full" on:click={click}>
   <img
     bind:this={imageElement}
-    class="transition-all border-slate-400 dark:border-slate-700 select-none"
+    class="w-full transition-all border-slate-400 dark:border-slate-700 select-none"
     class:selected
     src={sectionOpt.src}
     alt="A screenshot of a portion of a webpage." />
