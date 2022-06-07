@@ -1,10 +1,27 @@
 <script lang="ts">
+  import { data, type SectionType } from "./data/appdata";
   import Modal from "./Modal.svelte";
   import XCircle from "svelte-bootstrap-icons/lib/XCircle/XCircle.svelte";
   import AddSectionModalOption from "./AddSectionModalOption.svelte";
   import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
+  const sections = data.sections;
+
+  type OptionInfo = {
+    key: string;
+    type: SectionType;
+  };
+
+  const modalOptions: Array<OptionInfo> = [];
+
+  for (const key in sections) {
+    //@ts-ignore
+    const value: SectionType = sections[key];
+    if (value.options.length > 0) {
+      modalOptions.push({ key: key, type: value });
+    }
+  }
 
   const close = () => {
     dispatch("close");
@@ -27,11 +44,12 @@
       </button>
     </header>
     <div>
-      <AddSectionModalOption key="header" option="Header" on:decision />
-      <AddSectionModalOption key="hero" option="Hero" on:decision />
-      <AddSectionModalOption key="features" option="Features" on:decision />
-      <AddSectionModalOption key="blog" option="Blog" on:decision />
-      <AddSectionModalOption last key="footer" option="Footer" on:decision />
+      {#each modalOptions as opt}
+        <AddSectionModalOption
+          key={opt.key}
+          option={opt.type.displayName}
+          on:decision />
+      {/each}
     </div>
   </div>
 </Modal>
