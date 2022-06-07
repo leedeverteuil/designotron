@@ -39,9 +39,14 @@ const data: AppData = {
       displayName: "Header",
       options: [
         {
-          src: "/img/header-1.webp",
+          src: "/img/lb/header-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
+        },
+        {
+          src: "/img/sb/header-sb.webp",
+          author: "Sparkbox",
+          href: "https://sparkbox.com/"
         },
       ]
     },
@@ -49,9 +54,14 @@ const data: AppData = {
       displayName: "Hero",
       options: [
         {
-          src: "/img/hero-1.webp",
+          src: "/img/lb/hero-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
+        },
+        {
+          src: "/img/sb/hero-sb.webp",
+          author: "Sparkbox",
+          href: "https://sparkbox.com/"
         },
       ]
     },
@@ -59,14 +69,24 @@ const data: AppData = {
       displayName: "Features",
       options: [
         {
-          src: "/img/features-1.webp",
+          src: "/img/lb/features-lb-1.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
         },
         {
-          src: "/img/features-2.webp",
+          src: "/img/lb/features-lb-2.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
+        },
+        {
+          src: "/img/sb/features-sb-1.webp",
+          author: "Sparkbox",
+          href: "https://sparkbox.com/"
+        },
+        {
+          src: "/img/sb/features-sb-2.webp",
+          author: "Sparkbox",
+          href: "https://sparkbox.com/"
         },
       ]
     },
@@ -74,7 +94,7 @@ const data: AppData = {
       displayName: "Call-To-Action",
       options: [
         {
-          src: "/img/cta-1.webp",
+          src: "/img/lb/cta-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
         },
@@ -84,7 +104,7 @@ const data: AppData = {
       displayName: "Pricing",
       options: [
         {
-          src: "/img/pricing-1.webp",
+          src: "/img/lb/pricing-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
         },
@@ -94,7 +114,7 @@ const data: AppData = {
       displayName: "FAQ",
       options: [
         {
-          src: "/img/faq-1.webp",
+          src: "/img/lb/faq-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
         },
@@ -112,7 +132,7 @@ const data: AppData = {
       displayName: "Compare",
       options: [
         {
-          src: "/img/compare-1.webp",
+          src: "/img/lb/compare-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
         },
@@ -128,11 +148,28 @@ const data: AppData = {
     },
     testimonials: {
       displayName: "Testimonials",
-      options: []
+      options: [
+        {
+          src: "/img/sb/testimonials-sb-1.webp",
+          author: "Sparkbox",
+          href: "https://sparkbox.com/"
+        },
+        {
+          src: "/img/sb/testimonials-sb-2.webp",
+          author: "Sparkbox",
+          href: "https://sparkbox.com/"
+        },
+      ]
     },
     blog: {
       displayName: "Blog",
-      options: []
+      options: [
+        {
+          src: "/img/sb/blog-sb.webp",
+          author: "Sparkbox",
+          href: "https://sparkbox.com/"
+        },
+      ]
     },
     contact: {
       displayName: "Contact",
@@ -142,9 +179,14 @@ const data: AppData = {
       displayName: "Team",
       options: [
         {
-          src: "/img/team-1.webp",
+          src: "/img/lb/team-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
+        },
+        {
+          src: "/img/sb/team-sb.webp",
+          author: "Sparkbox",
+          href: "https://sparkbox.com/"
         },
       ]
     },
@@ -152,7 +194,7 @@ const data: AppData = {
       displayName: "Logo Clouds",
       options: [
         {
-          src: "/img/logo-cloud-1.webp",
+          src: "/img/lb/logo-cloud-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
         },
@@ -163,9 +205,14 @@ const data: AppData = {
       displayName: "Page Heading",
       options: [
         {
-          src: "/img/page-heading-1.webp",
+          src: "/img/lb/page-heading-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
+        },
+        {
+          src: "/img/sb/page-heading-sb.webp",
+          author: "Sparkbox",
+          href: "https://sparkbox.com/"
         },
       ]
     },
@@ -173,7 +220,7 @@ const data: AppData = {
       displayName: "Content",
       options: [
         {
-          src: "/img/content-1.webp",
+          src: "/img/lb/content-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
         },
@@ -183,9 +230,14 @@ const data: AppData = {
       displayName: "Footer",
       options: [
         {
-          src: "/img/footer-1.webp",
+          src: "/img/lb/footer-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
+        },
+        {
+          src: "/img/sb/footer-sb.webp",
+          author: "Sparkbox",
+          href: "https://sparkbox.com/"
         },
       ]
     },
