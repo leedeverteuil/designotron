@@ -43,11 +43,12 @@
         <XCircle class="w-6 h-6" />
       </button>
     </header>
-    <div>
-      {#each modalOptions as opt}
+    <div class="max-h-[35rem] overflow-auto">
+      {#each modalOptions as opt, i}
         <AddSectionModalOption
           key={opt.key}
           option={opt.type.displayName}
+          last={i == modalOptions.length - 1}
           on:decision />
       {/each}
     </div>
