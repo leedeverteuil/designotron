@@ -65,15 +65,17 @@
   };
 </script>
 
-<div class="flex flex-col w-full">
-  {#each sections as section, i (section.id)}
-    <div animate:flip={{ duration: 400 }}>
-      <Section
-        data={section.data}
-        on:remove={() => removeSection(i)}
-        on:moveup={() => moveSectionUp(i)}
-        on:movedown={() => moveSectionDown(i)}
-        bind:this={section.component} />
-    </div>
-  {/each}
-</div>
+{#if sections.length > 0}
+  <div class="flex flex-col w-full border border-slate-400 dark:border-slate-700">
+    {#each sections as section, i (section.id)}
+      <div animate:flip={{ duration: 400 }}>
+        <Section
+          data={section.data}
+          on:remove={() => removeSection(i)}
+          on:moveup={() => moveSectionUp(i)}
+          on:movedown={() => moveSectionDown(i)}
+          bind:this={section.component} />
+      </div>
+    {/each}
+  </div>
+{/if}
