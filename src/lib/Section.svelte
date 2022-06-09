@@ -92,7 +92,8 @@
 <button bind:this={containerElement} class="block w-full" on:click={click}>
   <img
     bind:this={imageElement}
-    class="w-full transition-all border-slate-400 dark:border-slate-700 select-none"
+    class="w-full transition-all border-slate-400 dark:border-slate-700
+           select-none"
     class:selected
     src={sectionOpt.src}
     alt="A screenshot of a portion of a webpage." />
@@ -103,7 +104,8 @@
       transition:slide|local={{ duration: 250 }}
       class="px-4 py-4 w-full flex flex-col gap-3 items-center justify-center">
       <a
-        class="block text-slate-500 dark:text-slate-600 hover:text-blue-500 hover:underline"
+        class="block text-slate-500 dark:text-slate-600 hover:text-blue-500
+               hover:underline"
         href={sectionOpt.href}>&copy; {sectionOpt.author}</a>
       <div class="flex gap-3 items-center justify-center">
         <!-- Previous option -->

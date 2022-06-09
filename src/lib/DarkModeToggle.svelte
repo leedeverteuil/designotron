@@ -54,7 +54,8 @@
 
 <button
   on:click={toggleMode}
-  class="p-1 hover:text-slate-900 dark:hover:text-slate-100 rounded-sm focus-outline"
+  class="p-1 hover:text-slate-900 dark:hover:text-slate-100
+         rounded-sm focus-outline"
 >
   {#if darkMode}
     <LightbulbOff class="w-6 h-6" />

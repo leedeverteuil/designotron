@@ -30,16 +30,19 @@
 
 <Modal on:backgroundclick={close}>
   <div
-    class="mx-auto w-80 max-w-md rounded-lg bg-slate-100 dark:bg-slate-800 shadow-lg overflow-clip">
+    class="mx-auto w-80 max-w-md rounded-lg bg-slate-100
+           dark:bg-slate-800 shadow-lg overflow-clip">
     <header
-      class="flex items-center justify-between gap-2 border-b border-slate-300 dark:border-slate-700 px-4 py-4">
+      class="flex items-center justify-between gap-2 border-b
+           border-slate-300 dark:border-slate-700 px-4 py-4">
       <!-- Modal title -->
       <p>Add section</p>
 
       <!-- Close button -->
       <button
         on:click={close}
-        class="text-red-500 transition-transform hover:scale-110 focus:scale-110 active:scale-125">
+        class="text-red-500 transition-transform hover:scale-110
+                 focus:scale-110 active:scale-125">
         <XCircle class="w-6 h-6" />
       </button>
     </header>

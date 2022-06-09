@@ -14,7 +14,8 @@
 </script>
 
 <div
-  class="fixed top-0 left-0 w-screen h-screen bg-slate-900/50 dark:bg-slate-900/80"
+  class="fixed top-0 left-0 w-screen h-screen bg-slate-900/50
+       dark:bg-slate-900/80"
   transition:fade={{ duration: 120 }}
   on:click={click}>
   <div
