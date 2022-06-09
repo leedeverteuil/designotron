@@ -48,6 +48,16 @@ const data: AppData = {
           author: "Sparkbox",
           href: "https://sparkbox.com/"
         },
+        {
+          src: "/img/hotel-swan/header.webp",
+          author: "Outcrowd",
+          href: "https://dribbble.com/shots/17630655-Hotel-Swan-Web-Design-for-Hotel"
+        },
+        {
+          src: "/img/attio/header.webp",
+          author: "Attio",
+          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
+        },
       ]
     },
     hero: {
@@ -62,6 +72,21 @@ const data: AppData = {
           src: "/img/sb/hero-sb.webp",
           author: "Sparkbox",
           href: "https://sparkbox.com/"
+        },
+        {
+          src: "/img/hotel-swan/hero.webp",
+          author: "Outcrowd",
+          href: "https://dribbble.com/shots/17630655-Hotel-Swan-Web-Design-for-Hotel"
+        },
+        {
+          src: "/img/bento-matte/hero.webp",
+          author: "UI8",
+          href: "https://dribbble.com/shots/15565313-Bento-Matte-Mobile-App"
+        },
+        {
+          src: "/img/attio/hero.webp",
+          author: "Attio",
+          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
         },
       ]
     },
@@ -88,6 +113,16 @@ const data: AppData = {
           author: "Sparkbox",
           href: "https://sparkbox.com/"
         },
+        {
+          src: "/img/attio/features.webp",
+          author: "Attio",
+          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
+        },
+        {
+          src: "/img/attio/features-2.webp",
+          author: "Attio",
+          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
+        },
       ]
     },
     cta: {
@@ -97,6 +132,16 @@ const data: AppData = {
           src: "/img/lb/cta-lb.webp",
           author: "Lookback",
           href: "https://www.lookback.com/"
+        },
+        {
+          src: "/img/attio/cta.webp",
+          author: "Attio",
+          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
+        },
+        {
+          src: "/img/attio/cta-2.webp",
+          author: "Attio",
+          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
         },
       ]
     },
@@ -159,6 +204,11 @@ const data: AppData = {
           author: "Sparkbox",
           href: "https://sparkbox.com/"
         },
+        {
+          src: "/img/attio/testimonials.webp",
+          author: "Attio",
+          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
+        },
       ]
     },
     blog: {
@@ -198,7 +248,11 @@ const data: AppData = {
           author: "Lookback",
           href: "https://www.lookback.com/"
         },
-
+        {
+          src: "/img/attio/logo-cloud.webp",
+          author: "Attio",
+          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
+        },
       ]
     },
     pageheading: {
@@ -238,6 +292,11 @@ const data: AppData = {
           src: "/img/sb/footer-sb.webp",
           author: "Sparkbox",
           href: "https://sparkbox.com/"
+        },
+        {
+          src: "/img/attio/footer.webp",
+          author: "Attio",
+          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
         },
       ]
     },
