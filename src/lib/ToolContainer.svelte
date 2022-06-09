@@ -44,7 +44,7 @@
   <!-- Control buttons -->
   <div class="w-full grid grid-cols-4 gap-3 justify-items-stretch">
     <Button primary on:click={randomize}>Randomize</Button>
-    <Button
+    <!-- <Button
       >Import
       <span class="text-sm bg-slate-300 dark:bg-slate-800 px-2 py-1 rounded-lg"
         >Todo</span
@@ -53,7 +53,7 @@
       >Export
       <span class="text-sm bg-slate-300 dark:bg-slate-800 px-2 py-1 rounded-lg"
         >Todo</span>
-    </Button>
+    </Button> -->
     <Button danger on:click={destroy}>Destroy</Button>
   </div>
 
