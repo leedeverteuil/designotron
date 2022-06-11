@@ -58,6 +58,11 @@ const data: AppData = {
           author: "Attio",
           href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
         },
+        {
+          src: "/img/evervault/header.webp",
+          author: "Evervault",
+          href: "https://evervault.com/"
+        },
       ]
     },
     hero: {
@@ -87,6 +92,11 @@ const data: AppData = {
           src: "/img/attio/hero.webp",
           author: "Attio",
           href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
+        },
+        {
+          src: "/img/evervault/hero.webp",
+          author: "Evervault",
+          href: "https://evervault.com/"
         },
       ]
     },
@@ -122,6 +132,16 @@ const data: AppData = {
           src: "/img/attio/features-2.webp",
           author: "Attio",
           href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
+        },
+        {
+          src: "/img/evervault/features.webp",
+          author: "Evervault",
+          href: "https://evervault.com/"
+        },
+        {
+          src: "/img/evervault/features-2.webp",
+          author: "Evervault",
+          href: "https://evervault.com/"
         },
       ]
     },
@@ -209,6 +229,11 @@ const data: AppData = {
           author: "Attio",
           href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
         },
+        {
+          src: "/img/evervault/testimonials.webp",
+          author: "Evervault",
+          href: "https://evervault.com/"
+        },
       ]
     },
     blog: {
@@ -252,6 +277,11 @@ const data: AppData = {
           src: "/img/attio/logo-cloud.webp",
           author: "Attio",
           href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
+        },
+        {
+          src: "/img/evervault/logo-cloud.webp",
+          author: "Evervault",
+          href: "https://evervault.com/"
         },
       ]
     },
@@ -297,6 +327,11 @@ const data: AppData = {
           src: "/img/attio/footer.webp",
           author: "Attio",
           href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
+        },
+        {
+          src: "/img/evervault/footer.webp",
+          author: "Evervault",
+          href: "https://evervault.com/"
         },
       ]
     },
