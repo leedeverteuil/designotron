@@ -12,7 +12,8 @@
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "import": "node ./dev-scripts/import.cjs"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",

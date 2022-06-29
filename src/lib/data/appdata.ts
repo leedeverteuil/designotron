@@ -1,7 +1,9 @@
+import raw_data from "./data.json";
+
 type SectionOption = {
-  src: string,
+  img: string,
   author: string,
-  href: string
+  source: string
 };
 
 type SectionType = {
@@ -33,310 +35,105 @@ type AppData = {
   }
 };
 
-const data: AppData = {
+let data: AppData = {
   sections: {
     header: {
       displayName: "Header",
-      options: [
-        {
-          src: "/img/lb/header-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-        {
-          src: "/img/sb/header-sb.webp",
-          author: "Sparkbox",
-          href: "https://sparkbox.com/"
-        },
-        {
-          src: "/img/hotel-swan/header.webp",
-          author: "Outcrowd",
-          href: "https://dribbble.com/shots/17630655-Hotel-Swan-Web-Design-for-Hotel"
-        },
-        {
-          src: "/img/attio/header.webp",
-          author: "Attio",
-          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
-        },
-        {
-          src: "/img/evervault/header.webp",
-          author: "Evervault",
-          href: "https://evervault.com/"
-        },
-      ]
+      options: [],
     },
     hero: {
       displayName: "Hero",
-      options: [
-        {
-          src: "/img/lb/hero-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-        {
-          src: "/img/sb/hero-sb.webp",
-          author: "Sparkbox",
-          href: "https://sparkbox.com/"
-        },
-        {
-          src: "/img/hotel-swan/hero.webp",
-          author: "Outcrowd",
-          href: "https://dribbble.com/shots/17630655-Hotel-Swan-Web-Design-for-Hotel"
-        },
-        {
-          src: "/img/bento-matte/hero.webp",
-          author: "UI8",
-          href: "https://dribbble.com/shots/15565313-Bento-Matte-Mobile-App"
-        },
-        {
-          src: "/img/attio/hero.webp",
-          author: "Attio",
-          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
-        },
-        {
-          src: "/img/evervault/hero.webp",
-          author: "Evervault",
-          href: "https://evervault.com/"
-        },
-      ]
+      options: [],
     },
     features: {
       displayName: "Features",
-      options: [
-        {
-          src: "/img/lb/features-lb-1.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-        {
-          src: "/img/lb/features-lb-2.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-        {
-          src: "/img/sb/features-sb-1.webp",
-          author: "Sparkbox",
-          href: "https://sparkbox.com/"
-        },
-        {
-          src: "/img/sb/features-sb-2.webp",
-          author: "Sparkbox",
-          href: "https://sparkbox.com/"
-        },
-        {
-          src: "/img/attio/features.webp",
-          author: "Attio",
-          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
-        },
-        {
-          src: "/img/attio/features-2.webp",
-          author: "Attio",
-          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
-        },
-        {
-          src: "/img/evervault/features.webp",
-          author: "Evervault",
-          href: "https://evervault.com/"
-        },
-        {
-          src: "/img/evervault/features-2.webp",
-          author: "Evervault",
-          href: "https://evervault.com/"
-        },
-      ]
+      options: [],
     },
     cta: {
-      displayName: "Call-To-Action",
-      options: [
-        {
-          src: "/img/lb/cta-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-        {
-          src: "/img/attio/cta.webp",
-          author: "Attio",
-          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
-        },
-        {
-          src: "/img/attio/cta-2.webp",
-          author: "Attio",
-          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
-        },
-      ]
+      displayName: "Call to Action",
+      options: [],
     },
     pricing: {
       displayName: "Pricing",
-      options: [
-        {
-          src: "/img/lb/pricing-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-      ]
+      options: [],
     },
     faq: {
       displayName: "FAQ",
-      options: [
-        {
-          src: "/img/lb/faq-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-      ]
+      options: [],
     },
     newsletter: {
       displayName: "Newsletter",
-      options: []
+      options: [],
     },
     stats: {
       displayName: "Stats",
-      options: []
+      options: [],
     },
     compare: {
       displayName: "Compare",
-      options: [
-        {
-          src: "/img/lb/compare-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-      ]
+      options: [],
     },
     steps: {
       displayName: "Steps",
-      options: []
+      options: [],
     },
     events: {
       displayName: "Events",
-      options: []
+      options: [],
     },
     testimonials: {
       displayName: "Testimonials",
-      options: [
-        {
-          src: "/img/sb/testimonials-sb-1.webp",
-          author: "Sparkbox",
-          href: "https://sparkbox.com/"
-        },
-        {
-          src: "/img/sb/testimonials-sb-2.webp",
-          author: "Sparkbox",
-          href: "https://sparkbox.com/"
-        },
-        {
-          src: "/img/attio/testimonials.webp",
-          author: "Attio",
-          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
-        },
-        {
-          src: "/img/evervault/testimonials.webp",
-          author: "Evervault",
-          href: "https://evervault.com/"
-        },
-      ]
+      options: [],
     },
     blog: {
       displayName: "Blog",
-      options: [
-        {
-          src: "/img/sb/blog-sb.webp",
-          author: "Sparkbox",
-          href: "https://sparkbox.com/"
-        },
-      ]
+      options: [],
     },
     contact: {
       displayName: "Contact",
-      options: []
+      options: [],
     },
     team: {
       displayName: "Team",
-      options: [
-        {
-          src: "/img/lb/team-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-        {
-          src: "/img/sb/team-sb.webp",
-          author: "Sparkbox",
-          href: "https://sparkbox.com/"
-        },
-      ]
+      options: [],
     },
     logoclouds: {
       displayName: "Logo Clouds",
-      options: [
-        {
-          src: "/img/lb/logo-cloud-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-        {
-          src: "/img/attio/logo-cloud.webp",
-          author: "Attio",
-          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
-        },
-        {
-          src: "/img/evervault/logo-cloud.webp",
-          author: "Evervault",
-          href: "https://evervault.com/"
-        },
-      ]
+      options: [],
     },
     pageheading: {
       displayName: "Page Heading",
-      options: [
-        {
-          src: "/img/lb/page-heading-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-        {
-          src: "/img/sb/page-heading-sb.webp",
-          author: "Sparkbox",
-          href: "https://sparkbox.com/"
-        },
-      ]
+      options: [],
     },
     content: {
       displayName: "Content",
-      options: [
-        {
-          src: "/img/lb/content-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-      ]
+      options: [],
     },
     footer: {
       displayName: "Footer",
-      options: [
-        {
-          src: "/img/lb/footer-lb.webp",
-          author: "Lookback",
-          href: "https://www.lookback.com/"
-        },
-        {
-          src: "/img/sb/footer-sb.webp",
-          author: "Sparkbox",
-          href: "https://sparkbox.com/"
-        },
-        {
-          src: "/img/attio/footer.webp",
-          author: "Attio",
-          href: "https://attio.com/?utm_source=dribbble&utm_medium=social_post&utm_campaign=attio&utm_content=shot18"
-        },
-        {
-          src: "/img/evervault/footer.webp",
-          author: "Evervault",
-          href: "https://evervault.com/"
-        },
-      ]
+      options: [],
     },
   }
-};
+}
+
+// Raw format is better at efficient storage, but
+// we convert to more application friendly objects
+// at runtime
+raw_data.groups.forEach(g => {
+  for (const img in g.screenshots) {
+    // Data is stored in json like so:
+    // "url": "sectionName"
+    const sectName = g.screenshots[img as keyof typeof g.screenshots];
+    const sect = data.sections[sectName as keyof typeof data.sections];
+
+    sect.options.push({
+      img: `/img/${g.prefix}-${img}.webp`,
+      author: g.author,
+      source: g.source
+    });
+  }
+});
+
 
 export { data };
 export type { AppData, SectionType, SectionOption };

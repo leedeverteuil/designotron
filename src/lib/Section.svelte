@@ -95,7 +95,7 @@
     class="w-full transition-all border-slate-400 dark:border-slate-700
            select-none"
     class:selected
-    src={sectionOpt.src}
+    src={sectionOpt.img}
     alt="A screenshot of a portion of a webpage." />
 
   <!-- Selection control buttons -->
@@ -106,7 +106,7 @@
       <a
         class="block text-slate-500 dark:text-slate-600 hover:text-blue-500
                hover:underline"
-        href={sectionOpt.href}>&copy; {sectionOpt.author}</a>
+        href={sectionOpt.source}>&copy; {sectionOpt.author}</a>
       <div class="flex gap-3 items-center justify-center">
         <!-- Previous option -->
         <Button on:click={previous}>
