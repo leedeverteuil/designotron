@@ -125,12 +125,13 @@ raw_data.groups.forEach(g => {
     // "url": "sectionName"
     const sectName = g.screenshots[img as keyof typeof g.screenshots];
     const sect = data.sections[sectName as keyof typeof data.sections];
-
-    sect.options.push({
-      img: `/img/${g.prefix}-${img}.webp`,
+    const obj = {
+      img: `img/${g.prefix}-${img}.webp`,
       author: g.author,
       source: g.source
-    });
+    };
+
+    sect.options.push(obj);
   }
 });
 
