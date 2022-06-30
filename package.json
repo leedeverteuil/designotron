@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "build": "svelte-kit build && cp .gitignore build/.gitignore",
+    "deploy": "touch build/.nojekyll && npx gh-pages -d build -t true -m ':rocket: Deploying app to GitHub Pages!'",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
@@ -16,9 +17,10 @@
     "import": "node ./dev-scripts/import.cjs"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-static": "^1.0.0-next.34",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.4",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.12",
     "postcss-load-config": "^3.1.4",
     "svelte": "^3.44.0",

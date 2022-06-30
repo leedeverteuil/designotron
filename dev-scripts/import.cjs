@@ -1,3 +1,9 @@
+/* Example usage
+
+npm run import [author] [url] [prefix] [webp-dir]
+
+*/
+
 const fs = require("fs");
 const path = require("path");
 
