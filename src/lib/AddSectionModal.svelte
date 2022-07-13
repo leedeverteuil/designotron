@@ -46,7 +46,9 @@
         <XCircle class="w-6 h-6" />
       </button>
     </header>
-    <div class="max-h-[35rem] overflow-auto">
+    <div
+      class="max-h-[20rem] sm:max-h-[25rem] md:max-h-[30rem]
+             lg:max-h-[35rem] overflow-auto">
       {#each modalOptions as opt, i}
         <AddSectionModalOption
           key={opt.key}
