@@ -11,5 +11,8 @@ Potential use cases:
 
 ![An example of Designotron in action.](/docs/example.webp)
 
+## How to use
+[Go to the website hosted on GitHub Pages.](https://leedeverteuil.github.io/designotron/)
+
 ## Disclaimer
 I am not the designer/owner of any of the websites depicted in the screenshots here. Send me an email at deverti@proton.me if your design is featured here and you want it removed.
